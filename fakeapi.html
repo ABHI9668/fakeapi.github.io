@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    
+    <title>API</title>
+    <script>
+       
+
+     let contentDiv=document.getElementById("firstdiv");
+        let url="https://api.github.com/users"
+       const fetchdata= fetch(url).then(response=>{
+           
+         return  response.json()   
+        
+        }).then(data=>{
+            console.log(data)
+             fd.innerHTML=data[0];
+             
+        })
+    
+
+    </script>
+    <style>
+        body{
+            background-color: darkseagreen;
+        }
+       table{
+           border: 2px solid black;
+           
+           font-size: 20px;
+           margin-left: 40%;
+           margin-top: 5%;
+          
+       }
+       th{
+           padding: 20px;
+           background-color: darkkhaki;
+       }
+       td{
+           background-color: darksalmon;
+       }
+       h2{
+           margin-left: 42%;
+           margin-top: 4%;
+       }
+      
+    </style>
+</head>
+<body>
+    <div id="firstdiv">
+        <h2>Fetch data from the fake API</h2>
+      
+        <table>
+            <tr>
+                <th> Login ID</th>
+                <th>NAME</th>
+                <th>Node ID</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>mojombo</td>
+                  <td>MDQ6VXNlcjE</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>defunkt</td>
+                  <td>MDQ6VXNlcjI</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>pjhyett</td>
+                  <td>MDQ6VXNlcjM</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>wycats</td>
+                  <td>MDQ6VXNlcjQ</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+              <td>ezmobius</td>
+              <td>MDQ6VXNlcjU</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>ezmobius</td>
+                <td>MDQ6VXNlcjU</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>ivey</td>
+                <td>MDQ6VXNlcjY</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>evanphx</td>
+                <td>MDQ6VXNlcjc</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>vanpelt</td>
+                <td>MDQ6VXNlcby</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>crunvgy</td>
+                <td>MDQ6VXNvfbgf</td>
+            </tr>
+           
+        </table>
+    </div>
+    
+</body>
+</html>
